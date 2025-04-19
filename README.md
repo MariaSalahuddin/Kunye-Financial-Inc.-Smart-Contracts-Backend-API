@@ -9,16 +9,20 @@ Backend API: For deploying and interacting with the smart contracts.
 Installation
 git clone https://github.com/MariaSalahuddin/Kunye-Financial-Inc.-Smart-Contracts-Backend-API.git
 
-cd <project-folder>
+cd project-folder
 
 npm install
 
 
 
-Create a .env file with the following contents
+Create a .env file with the following contents:
+
 PORT=3000
+
 MONGO_URI=mongodb://localhost:27017/kunye_db
+
 ALCHEMY_API=https://eth-sepolia.g.alchemy.com/v2/<YOUR_API_KEY>
+
 PRIVATE_KEY=<YOUR_PRIVATE_KEY>
 
 
@@ -87,15 +91,20 @@ Conditional Payment Smart Contract Code:
 
 
 Compile the contract with the correct Solidity version.
+
 Deploy the contract on Sepolia Testnet using Injected Web3 (MetaMask).
+
 Save the ABI and Bytecode from the Compilation Details.
 
 2. Update ABI and Bytecode:
+   
 Copy the ABI and Bytecode from Remix.
+
 Save the ABI and Bytecode files in the contracts/ directory.
 
 
 Following are the APIs you can check on POSTMAN
+
 1. Deploying Conditional Contracts
   POST: /contracts/deploy/conditionalContract
   BODY: {
