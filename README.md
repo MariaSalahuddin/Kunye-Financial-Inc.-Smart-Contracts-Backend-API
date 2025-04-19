@@ -37,8 +37,15 @@ Open Remix IDE: https://remix.ethereum.org
 Paste the smart contract code.
 
 
-VendorPayment(Timed Contract) Code
+VendorPayment(Timed Contract) Code:
 
+contract VendorPayment {
+
+    address public payer;
+    address payable public payee;
+    uint public amount;
+    uint public dueDate;
+    bool public paid;
 
     constructor(address payable _payee, uint _amount, uint _dueDate) {
         payer = msg.sender;
@@ -59,11 +66,18 @@ VendorPayment(Timed Contract) Code
      function getStatus() public view returns (bool) {
         return paid;
     }
-
-
+    }
 
 
 Conditional Payment Smart Contract Code: 
+
+contract ConditionalVendorPayment {
+
+    address public payer;
+    address payable public payee;
+    uint public amount;
+    bool public confirmed;
+    bool public paid;
 
     constructor(address payable _payee) payable {
         payer = msg.sender;
@@ -87,6 +101,7 @@ Conditional Payment Smart Contract Code:
 
     function getStatus() public view returns (bool) {
         return paid;
+    }
     }
 
 
