@@ -8,7 +8,9 @@ Backend API: For deploying and interacting with the smart contracts.
 
 Installation
 git clone https://github.com/MariaSalahuddin/Kunye-Financial-Inc.-Smart-Contracts-Backend-API.git
+
 cd <project-folder>
+
 npm install
 
 
